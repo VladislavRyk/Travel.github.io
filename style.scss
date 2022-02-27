@@ -53,6 +53,10 @@ html {
     }
 }
 
+section {
+    padding: 2rem 9%;
+}
+
 header {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -260,6 +264,68 @@ header {
 
     @media (max-width: 768px) {
         display: initial;
+    }
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+
+    .content {
+        text-align: center;
+
+        h3 {
+            font-size: 4.5rem;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .2);
+        }
+
+        p {
+            font-size: 2.5rem;
+            color: rgb(218, 218, 218);
+            text-transform: uppercase;
+            padding: 0.5rem 0;
+        }
+    }
+
+    .video-container {
+
+        video {
+            position: absolute;
+            top: 0; left: 0;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .controls {
+        padding: 1rem;
+        border-radius: 5rem;
+        background: rgba(0, 0, 0, .7);
+        position: relative;
+        top: 10rem;
+
+        .vid-btn {
+            height: 2rem;
+            width: 2rem;
+            display: inline-block;
+            border-radius: 50%;
+            background: #FFF;
+            cursor: pointer;
+            margin:0 .5rem;
+
+            &.active {
+                background: var(--orange);
+            }
+        }
     }
 }
 

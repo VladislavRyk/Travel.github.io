@@ -461,3 +461,94 @@ header {
         }
     }
 }
+
+.services {
+    background-color: rgba(251, 232, 255, 0.664);
+
+    .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1.5rem;
+
+        .box {
+            flex: 1 1 30rem;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+
+            &:hover {
+                box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+                cursor: pointer;
+            }
+
+            i {
+                padding: 1rem;
+                font-size: 5rem;
+                color: var(--orange);
+            }
+
+            h3 {
+                font-size: 2.5rem;
+                color: #333;
+            }
+
+            p {
+                font-size: 1.5rem;
+                color: rgb(114, 114, 114);
+                padding: 1rem 0;
+            }
+        }
+    }
+}
+
+.gallery {
+
+    .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+
+        .box {
+            overflow: hidden;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+            border: 1rem solid #fff;
+            border-radius: .5rem;
+            flex: 1 1 30rem;
+            height: 40rem;
+            position: relative; 
+
+            &:hover .content{
+                top: 0;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .content {
+                position: absolute;
+                top: -100%; left: 0;
+                height: 100%;
+                width: 100%;
+                text-align: center;
+                background: rgba(0, 0, 0, .7);
+                padding: 2rem;
+                padding-top: 5rem;
+
+                h3 {
+                    font-size: 2.5rem;
+                    color: var(--orange);
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    color:#eee;
+                    padding: 0.5rem 0;
+                }
+            }
+
+        }
+    }
+}
